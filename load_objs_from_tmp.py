@@ -8,7 +8,7 @@ print(paths)
 
 for path in paths:
     temp_path = "/tmp/objs/" + path
-    bpy.ops.import_scene.obj(filepath=temp_path)
+    bpy.ops.import_scene.obj(filepath=temp_path, axis_forward='-Y', axis_up='Z')
 
 objects = list(bpy.data.objects)
 for object in objects:
